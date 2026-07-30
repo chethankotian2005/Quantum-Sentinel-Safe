@@ -1,0 +1,47 @@
+{
+    "code": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "files_tested": 17,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+    },
+    "certs": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "files_tested": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+    },
+    "configs": {
+        "tp": 13,
+        "fp": 0,
+        "fn": 0,
+        "files_tested": 11,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+    },
+    "live": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "files_tested": 9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+    },
+    "overall": {
+        "tp": 38,
+        "fp": 0,
+        "fn": 0,
+        "files_tested": 41,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+    }
+}

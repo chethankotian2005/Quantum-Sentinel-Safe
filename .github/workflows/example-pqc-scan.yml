@@ -1,0 +1,27 @@
+name: Example QuantumSafe Scan
+
+on:
+  pull_request:
+    branches: [ "main", "develop" ]
+  workflow_dispatch:
+
+jobs:
+  quantumsafe-scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write # Required to post PR comments
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run QuantumSafe Sentinel Scan
+        # In a real repository, this would be: 
+        # uses: your-org/QuantumSafe-Sentinel/.github/actions/quantumsafe-scan@main
+        # Here we use the local action path for demonstration:
+        uses: ./.github/actions/quantumsafe-scan
+        with:
+          target_dir: '.'
+          fail_on: 'High'
+          github_token: ${{ secrets.GITHUB_TOKEN }}

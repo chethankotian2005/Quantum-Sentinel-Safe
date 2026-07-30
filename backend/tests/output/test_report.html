@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quantum Risk Report - scan_c197ad49</title>
+    <style>
+        body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; margin: 40px; }
+        h1, h2 { color: #2c3e50; }
+        .grade { font-size: 48px; font-weight: bold; color: #c0392b; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .critical { background-color: #ffdddd; }
+        .high { background-color: #ffeecc; }
+        .summary-box { background: #f9f9f9; padding: 20px; border-left: 5px solid #3498db; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <h1>QuantumSafe Sentinel - Executive Report</h1>
+    <p>Scan ID: scan_c197ad49</p>
+    
+    <div class="summary-box">
+        <h2>Executive Risk Score</h2>
+        <p class="grade">Grade: F (0/100)</p>
+        <p>Findings Summary: 7 Critical | 3 High | 0 Medium | 0 Low</p>
+    </div>
+
+    <div class="summary-box">
+        <h2>Migration Impact Estimate</h2>
+        <p>Estimated Storage Bloat: 26.3195 MB/day</p>
+        <p>Handshake Latency Penalty: +2.375 ms per connection</p>
+        <p>Bandwidth Increase: 699.0%</p>
+        <p><i>Assumes 1000 ops/day. Sourced directly from local hardware benchmarks.</i></p>
+    </div>
+
+    <h2>Vulnerability Detail & PQC Recommendations</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Source</th>
+                <th>Current Algorithm</th>
+                <th>Context / Usage</th>
+                <th>Risk</th>
+                <th>PQC Recommendation</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            
+            <tr class="critical">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\certs\ecc_p256_kex.pem</td>
+                <td>ECC (256)</td>
+                <td>production_cert / key_exchange</td>
+                <td>Critical</td>
+                <td>ML-KEM (Kyber)<br><small>(Hybrid: X25519+Kyber768)</small></td>
+            </tr>
+            
+            
+            <tr class="critical">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\certs\rsa_2048_sign.pem</td>
+                <td>RSA (2048)</td>
+                <td>production_cert / signing</td>
+                <td>Critical</td>
+                <td>ML-DSA (Dilithium)<br><small>(Hybrid: RSA3072+ML-DSA-65)</small></td>
+            </tr>
+            
+            
+            <tr class="high">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\certs\rsa_4096_misc.pem</td>
+                <td>RSA (4096)</td>
+                <td>production_cert / key_exchange</td>
+                <td>High</td>
+                <td>ML-KEM (Kyber)<br><small>(Hybrid: X25519+Kyber768)</small></td>
+            </tr>
+            
+            
+            <tr class="high">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\vulnerable-repo\auth.py</td>
+                <td>RSA (2048)</td>
+                <td>code / misc</td>
+                <td>High</td>
+                <td>ML-KEM (Kyber)</td>
+            </tr>
+            
+            
+            <tr class="critical">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\vulnerable-repo\tls_helper.py</td>
+                <td>ECC (Unknown)</td>
+                <td>code / key_exchange</td>
+                <td>Critical</td>
+                <td>ML-KEM (Kyber)<br><small>(Hybrid: X25519+Kyber768)</small></td>
+            </tr>
+            
+            
+            <tr class="high">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\configs\nginx.conf</td>
+                <td>RSA (Unknown)</td>
+                <td>config / signing</td>
+                <td>High</td>
+                <td>ML-DSA (Dilithium)</td>
+            </tr>
+            
+            
+            <tr class="critical">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\configs\nginx.conf</td>
+                <td>DH (Unknown)</td>
+                <td>config / key_exchange</td>
+                <td>Critical</td>
+                <td>ML-KEM (Kyber)<br><small>(Hybrid: X25519+Kyber768)</small></td>
+            </tr>
+            
+            
+            <tr class="critical">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\configs\nginx.conf</td>
+                <td>ECDH (Unknown)</td>
+                <td>config / key_exchange</td>
+                <td>Critical</td>
+                <td>ML-KEM (Kyber)<br><small>(Hybrid: X25519+Kyber768)</small></td>
+            </tr>
+            
+            
+            <tr class="critical">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\configs\sshd_config</td>
+                <td>DH (Unknown)</td>
+                <td>config / key_exchange</td>
+                <td>Critical</td>
+                <td>ML-KEM (Kyber)<br><small>(Hybrid: X25519+Kyber768)</small></td>
+            </tr>
+            
+            
+            <tr class="critical">
+                <td>E:\QuantumSafe Sentinel\backend\tests\..\..\sample-data\configs\sshd_config</td>
+                <td>ECDH (Unknown)</td>
+                <td>config / key_exchange</td>
+                <td>Critical</td>
+                <td>ML-KEM (Kyber)<br><small>(Hybrid: X25519+Kyber768)</small></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>

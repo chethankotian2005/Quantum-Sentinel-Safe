@@ -1,0 +1,1 @@
+The sshd_config file should not contain diffie-hellman.

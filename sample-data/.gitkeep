@@ -1,0 +1,3 @@
+# Sample data for QuantumSafe Sentinel scans
+# This directory contains curated sample repos, certificates, and config files
+# with known quantum-vulnerable cryptography for demo and testing purposes.

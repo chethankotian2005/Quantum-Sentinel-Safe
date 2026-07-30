@@ -1,0 +1,7 @@
+# This is the sshd server system-wide configuration file.
+Port 22
+ListenAddress 0.0.0.0
+
+# Vulnerable Kex algorithms for testing
+KexAlgorithms ecdh-sha2-nistp256,diffie-hellman-group14-sha1
+Ciphers aes128-ctr,aes192-ctr,aes256-ctr

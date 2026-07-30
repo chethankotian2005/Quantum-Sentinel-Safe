@@ -1,0 +1,24 @@
+# QuantumSafe Sentinel — Backend Dependencies
+# DRD Section 3: Tech Stack
+
+# Web framework (async support for live TLS scan latency)
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+
+# Classical crypto & X.509 parsing
+cryptography>=43.0.0
+
+# PQC engine — highest-risk dependency, validate Day 1
+liboqs-python>=0.11.0
+
+# PDF export (HTML→PDF)
+xhtml2pdf>=0.2.11
+
+# Templating for PDF reports
+Jinja2>=3.1.0
+
+# HTTP client (for potential use)
+httpx>=0.27.0
+
+# Testing
+pytest>=8.0.0
